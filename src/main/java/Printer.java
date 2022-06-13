@@ -18,13 +18,13 @@ public class Printer {
     public String print(int pages, int copies){
         int paperRequired = pages * copies;
         int tonerRequired = paperRequired;
-        if (paperRequired <= sheets){
+        if (paperRequired <= sheets && tonerRequired <= toner){
                 sheets -= paperRequired;
                 toner -= tonerRequired;
             return "print complete!";
         }
         else {
-            return "cannot print - not enough paper";
+            return "cannot print";
         }
     }
 }

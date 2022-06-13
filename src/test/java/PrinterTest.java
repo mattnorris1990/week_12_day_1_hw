@@ -23,7 +23,7 @@ public class PrinterTest {
 
     @Test
     public void wontPrint () {
-        assertEquals("cannot print - not enough paper", printer.print(2,3));
+        assertEquals("cannot print", printer.print(2,3));
     }
 
 
@@ -50,5 +50,5 @@ public class PrinterTest {
         printer.print(2,3);
         assertEquals(5,printer.getToner());
     }
-    
+
 }
